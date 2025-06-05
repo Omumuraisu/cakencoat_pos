@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Item</title>
+    <link rel="stylesheet" href="dashboard.css" type="text/css" />
+    <script src="dashboard.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <div class="menu-icon-button">
+            <button id="menu-toggle">&#9776;</button> <!-- Menu icon -->
+        </div>
+        <img src="Images/cnclogo.png" alt="Logo" class="logo">
+        <div class="brand-name">Cake n' Coat</div>
+        <div class="username">Username
+            <div><button>Sign out</button></div>
+        </div>
+    </div>
+    
+    <!-- Sidebar or menu -->
+    <div id="sidebar" class="sidebar hidden">
+        <button id="close-sidebar" class="close-sidebar-button">X</button> <!-- Close button -->
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </div>
+
+    <!-- Add New Item Section -->
+    <div class="add-new-item-container">
+        <h1 class="add-new-item-header">NEW ITEM</h1>
+    
+        <!-- Left Section: Form and Image Upload -->
+        <div class="left-section">
+            <!-- Form Section -->
+            <div class="box">
+                <div class="add-new-item-form">
+                    <input type="text" placeholder="Enter Item Name" id="item-name">
+                    <input type="number" placeholder="Enter Price" id="item-price">
+                </div>
+            </div>
+        
+            <!-- Image Upload Section -->
+            <div class="box">
+                <div class="add-new-item-image">
+                    <label for="item-image" class="upload-label">Upload Image</label>
+                    <input type="file" id="item-image" accept="image/*" style="display: none;">
+                </div>
+            </div>
+        </div>
+    
+        <!-- Right Section: Ingredients -->
+        <div class="box ingredients-section">
+            <h2>Ingredients</h2>
+            <div class="ingredient-actions">
+                <select id="ingredient-select">
+                    <option value="Chicken">Chicken</option>
+                    <option value="Beef">Beef</option>
+                    <option value="Pork">Pork</option>
+                    <option value="Fish">Fish</option>
+                    <option value="Sausage">Sausage</option>
+                    <option value="Hotdog">Hotdog</option>
+                    <option value="Bacon">Bacon</option>
+                    <option value="Ham">Ham</option>
+                </select>
+                <button class="add-btn">+</button>
+                <button class="remove-btn">x</button>
+            </div>
+        </div>
+    
+        <!-- Buttons Section -->
+        <div class="add-new-item-buttons">
+            <button class="cancel-btn">CANCEL</button>
+            <button class="save-btn">SAVE</button>
+        </div>
+    </div>
+</body>
+</html>

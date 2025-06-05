@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="assets/css/dashboard.css" type="text/css" />
+    <script src="dashboard.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <div class="menu-icon-button">
+            <button id="menu-toggle">&#9776;</button> <!-- Menu icon -->
+        </div>
+        <img src="Images/cnclogo.png" alt="Logo" class="logo">
+        <div class="brand-name">Cake n' Coat</div>
+        <div class="username">Username
+            <div><button>Sign out</button></div>
+        </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar hidden">
+        <button id="close-sidebar" class="close-sidebar-button">X</button> <!-- Close button -->
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <!-- Menu Title -->
+        <h1 class="menu-title">Menu</h1>
+
+        <!-- Menu Content -->
+        <div class="menu-container">
+            <!-- Category Section -->
+            <div class="menu-category-list">
+                <h2>Category</h2>
+                <ul>
+                    <li><a href="#" class="active">Hot Coffee</a></li>
+                    <li><a href="#">Iced Coffee</a></li>
+                    <li><a href="#">Non Coffee</a></li>
+                    <li><a href="#">Sandwiches</a></li>
+                    <li><a href="#">Pastries</a></li>
+                    <li><a href="#">Pasta</a></li>
+                    <li><a href="#">Specialties</a></li>
+                    <li><a href="#">Grilled</a></li>
+                    <li><a href="#">Stewed</a></li>
+                </ul>
+            </div>
+
+            <!-- Menu Items Section -->
+            <div class="menu-items">
+                <div class="menu-category-box">
+                    <h2 class="menu-category-title">Hot Coffee</h2>
+                    <div class="menu-grid">
+                        <div class="menu-card">
+                            <img src="Images/coffee.png" alt="Iced Matcha Cafe Latte">
+                            <p>Iced Matcha Cafe Latte</p>
+                            <div class="availability-icons">
+                                <span class="availability-icon available">✔</span>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="Images/coffee.png" alt="Iced Matcha Cafe Latte">
+                            <p>Iced Matcha Cafe Latte</p>
+                            <div class="availability-icons">
+                                <span class="availability-icon available">✔</span>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="Images/coffee.png" alt="Iced Matcha Cafe Latte">
+                            <p>Iced Matcha Cafe Latte</p>
+                            <div class="availability-icons">
+                                <span class="availability-icon available">✔</span>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="Images/coffee.png" alt="Iced Matcha Cafe Latte">
+                            <p>Iced Matcha Cafe Latte</p>
+                            <div class="availability-icons">
+                                <span class="availability-icon available">✔</span>
+                            </div>
+                        </div>
+                        <div class="menu-card disabled">
+                            <img src="Images/coffee.png" alt="Iced Matcha Cafe Latte">
+                            <p>Iced Matcha Cafe Latte</p>
+                            <div class="availability-icons">
+                                <span class="availability-icon unavailable">✖</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="add-item-container">
+                    <a href="#" class="add-item-button">Add Item</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

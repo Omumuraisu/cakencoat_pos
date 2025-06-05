@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="dashboard.css" type="text/css" />
+    <script src="dashboard.js" defer></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="menu-icon-button">
+            <button id="menu-toggle">&#9776;</button> <!-- Menu icon -->
+        </div>
+        <img src="Images/cnclogo.png" alt="Logo" class="logo">
+        <div class="brand-name">Cake n' Coat</div>
+        <div class="username">Username
+            <div><button>Sign out</button></div>
+        </div>
+    </div>
+    
+    <!-- Sidebar or menu -->
+    <div id="sidebar" class="sidebar hidden">
+        <button id="close-sidebar" class="close-sidebar-button">X</button> <!-- Close button -->
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </div>
+
+    <!-- Order Details Section -->
+    <div class="order-details-container">
+        <div class="order-details">
+            <h2 class="order-id">#2121</h2>
+            <h3 class="customer-name">Nash</h3>
+            <span class="order-status waiting">WAITING</span>
+            <hr>
+            <div class="order-items">
+                <p>Item <span class="item-price">21.00</span></p>
+                <p>Item <span class="item-price">20.00</span></p>
+                <p>Item x2 <span class="item-price">140.00</span></p>
+                <p>Item <span class="item-price">35.99</span></p>
+                <p>Item x2 <span class="item-price">32.00</span></p>
+                <p>Item <span class="item-price">32.00</span></p>
+                <p>Item <span class="item-price">12.00</span></p>
+            </div>
+            <hr>
+            <div class="order-total">
+                <strong>Total:</strong> <span class="total-price">100.00</span>
+            </div>
+        </div>
+        <div class="order-actions-container">
+            <button class="edit-order-btn">EDIT</button>
+            <button class="remove-order-btn">REMOVE</button>
+            <button class="served-order-btn">SERVED</button>
+        </div>
+    </div>
+</body>
+</html>

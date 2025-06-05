@@ -1,0 +1,1875 @@
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the logo and title */
+    align-items: center; /* Center content vertically */
+    padding: 10px;
+    background-color:#211a1e;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* Allow positioning of the username */
+}
+
+.menu-icon-button {
+    position: absolute; /* Position it independently */
+    left: 10px; /* Align it to the left corner */
+    top: 50%; /* Vertically center it */
+    transform: translateY(-50%); /* Adjust for centering */
+}
+
+.menu-icon-button button {
+    font-size: 32px; /* Further increase font size to make the lines longer */
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 5px; /* Add spacing between the lines to make them appear longer */
+    padding: 10px 20px; /* Optional: Adjust padding for better click area */
+}
+
+.menu-icon-button button:hover {
+    color: #ccc; /* Optional hover effect */
+}
+
+
+body.dark-mode .header {
+    background-color: #1e1e1e;
+    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    width: 50px; /* Keep the logo smaller */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add spacing between logo and title */
+}
+
+.brand-name {
+    font-family: 'Lato', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 24px; 
+    color: white;
+}
+
+.username {
+    position: absolute; /* Position the username independently */
+    right: 10px; /* Align it to the right corner */
+    top: 50%; /* Vertically center it */
+    transform: translateY(-50%); /* Adjust for centering */
+    font-size: 16px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.username button {
+    margin-top: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #f5f5f5;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.username button:hover {
+    background-color: #ffffff;
+}
+
+.nav-header {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .nav-header {
+    background-color: #1e1e1e;
+}
+
+.nav-item {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+body.dark-mode .nav-item {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+.nav-item:hover {
+    background-color: #d6d6d6;
+}
+
+body.dark-mode .nav-item:hover {
+    background-color: #444;
+}
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 1000px;
+    position: relative;
+    padding: 20px;
+}
+
+
+.divider {
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+    margin: 20px 0;
+}
+
+
+/* Orders Section */
+.latest-order {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+
+body.dark-mode .latest-order {
+    background-color: #1e1e1e;
+    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.latest-order table {
+    margin-bottom: 20px; /* Add margin between tables */
+}
+
+.latest-order table th {
+    background-color: #f8f9fa; /* Light background for headers */
+    color: #333; /* Dark text for headers */
+}
+
+.latest-order table td {
+    background-color: #fff; /* White background for table cells */
+}
+
+.latest-order .pending-header {
+    background-color: #ffeb3b; /* Yellow background for pending status */
+    color: #333; /* Dark text for better readability */
+}
+
+.latest-order .completed-header {
+    background-color: #4caf50; /* Green background for completed status */
+    color: #fff; /* White text for better readability */
+}
+
+.latest-order h1 {
+    text-align: left; /* Align the title to the left */
+    margin: 0; /* Remove any default margin */
+    font-size: 24px; /* Optional: Adjust font size if needed */
+    padding-left: 20px; /* Add some padding for spacing */
+}
+
+/* Order Status Section */
+.order-status {
+    display: flex;
+    justify-content: flex-end; /* Align everything to the right */
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+    gap: 20px; /* Add spacing between status icons and button */
+}
+
+.status-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Add spacing between the icons */
+}
+
+.status-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.status-indicator.pending {
+    background-color: #dcccbb; /* Beige for Waiting */
+}
+
+.status-indicator.paid {
+    background-color: #295135; /* Green for Served */
+}
+
+.status-indicator.completed {
+    background-color: #211a1e; /* Dark color for Payed */
+}
+
+.order-history {
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s;
+}
+
+.order-history:hover {
+    background-color: #e0e0e0;
+}
+
+.history-icon {
+    font-size: 14px;
+}
+
+.orders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.order-card {
+    background-color: #dcccbb;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    width: 150px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-card.paid {
+    background-color: #295135;
+    color: white; /* Ensure text is readable */
+}
+
+.order-card p {
+    margin: 5px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+body.dark-mode td {
+    border: 1px solid #444;
+}
+
+th {
+    background-color: #f8f9fa; 
+}
+
+body.dark-mode th {
+    background-color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', Arial, sans-serif;
+}
+
+@media (max-width: 768px) {
+    .nav-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-item {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .order-history {
+        width: calc(100% - 40px); 
+        bottom: 10px; 
+        right: 20px; 
+    }
+}
+
+.status.pending {
+    background-color: #ffeb3b; /* Yellow background for pending status */
+    color: #333; /* Dark text for better readability */
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold; /* Make text bold */
+}
+
+.status.completed {
+    background-color: #4caf50; /* Green background for completed status */
+    color: #fff; /* White text for better readability */
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold; /* Make text bold */
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.button {
+    padding: 40px 80px; /* Increase padding for larger buttons */
+    font-size: 32px; /* Increase font size */
+    font-weight: bold;
+    color: white;
+    background-color: #000000; /* Keep the background color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #333333; /* Optional: Darker hover effect */
+}
+
+
+.pos-button {
+    background-color: #295135;
+}
+
+.inventory-button {
+    background-color:#211a1e;
+}
+
+.menu-button {
+    background-color: #916953;
+}
+
+.brand-name {
+    color: white;
+    }
+
+    /* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transform: translateX(-100%); /* Initially hidden */
+    transition: transform 0.3s ease;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar.hidden {
+    transform: translateX(-100%); /* Hide the sidebar */
+}
+
+.sidebar.visible {
+    transform: translateX(0); /* Show the sidebar */
+}
+
+.close-sidebar-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close-sidebar-button:hover {
+    color: #ccc;
+}
+
+/* Sidebar */
+#sidebar {
+    background-color: #211a1e; /* Updated sidebar color */
+    color: white; /* Ensure text is visible on dark background */
+    width: 250px; /* Sidebar width */
+    height: 100%; /* Full height */
+    position: fixed; /* Fix sidebar position */
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+#sidebar ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar ul li {
+    margin-bottom: 15px;
+}
+
+#sidebar ul li a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Text color */
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#sidebar ul li a:hover {
+    background-color: #916953; /* Add hover effect */
+}
+
+/* Menu Page Layout */
+.menu-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start; /* Align items to the top */
+}
+
+/* Category Section */
+.menu-category-list {
+    width: 200px;
+    background-color: #916953; /* Updated background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%; /* Ensure it stretches */
+}
+
+.menu-category-list ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.menu-category-list ul li {
+    margin-bottom: 10px; /* Add spacing between items */
+}
+
+.menu-category-list ul li a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Text color */
+    font-size: 14px; /* Adjust font size */
+    font-weight: bold; /* Make text bold */
+    display: block; /* Make the link a block element */
+    padding: 10px 15px; /* Add padding for spacing */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.menu-category-list ul li a.active {
+    background-color:#211a1e; /* Highlight active category */
+    color: white; /* Ensure text is white */
+}
+
+.menu-category-list ul li a:hover {
+    background-color: #000000; /* Updated hover effect color */
+    color: white; /* Ensure text is white */
+}
+
+/* Menu Items Section */
+.menu-items {
+    flex: 1;
+}
+
+.menu-category {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-category h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.menu-card {
+    position: relative;
+    background-color: #295135;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 150px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-card img {
+    width: 140px; /* Increase the width further */
+    height: 140px; /* Increase the height further */
+    object-fit: cover; /* Ensure the image fits within the dimensions */
+    border-radius: 5px; /* Keep the rounded corners */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.menu-card p {
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.menu-card.disabled {
+    background-color: #d3d3d3; /* Light gray background */
+    color: #666; /* Darker text color for contrast */
+    opacity: 0.8; /* Slight transparency for a "disabled" effect */
+}
+
+.menu-card.disabled img {
+    opacity: 0.6; /* Dim the image for unavailable items */
+}
+
+.menu-card.disabled p {
+    color: #666; /* Adjust text color for better readability */
+}
+
+.menu-card:hover {
+    transform: scale(1.05);
+}
+
+.availability-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+.availability-icon {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: green;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.availability-icon.unavailable {
+    background-color: red;
+}
+
+/* Menu Title */
+.menu-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+    padding-left: 20px; /* Align with the content */
+}
+
+.menu-category-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+    padding-left: 10px; /* Align with the grid */
+    color: #333;
+}
+
+/* Inventory Page Layout */
+.inventory-container {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+    /* Increase width and height */
+    min-width: 1000px;
+    min-height: 700px;
+    padding: 40px 30px;
+    
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+/* Category Sidebar */
+.inventory-category {
+    width: 250px;
+    background-color: #916953;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.inventory-category h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.inventory-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.inventory-category ul li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.inventory-category ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.inventory-category ul li a:hover {
+    background-color: #211a1e;
+}
+
+
+
+.inventory-category .category-header {
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    background-color: #211a1e;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: block;
+    cursor: pointer;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    transition: background-color 0.2s;
+}
+
+.inventory-category .category-header.expanded {
+    background-color: #916953;
+    color: #fff;
+}
+
+.inventory-category .subcategory {
+    background-color: #211a1e;
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Hidden by default */
+}
+
+.inventory-category .subcategory li {
+    margin-bottom: 5px;
+}
+
+.inventory-category .subcategory li a {
+    font-size: 12px;
+    color: #f4f4f4;
+}
+
+.inventory-category ul li a.category-header::after {
+    content: "▼";
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    right: 10px;
+    transition: transform 0.3s;
+}
+
+.inventory-category ul li a.category-header.expanded::after {
+    transform: rotate(180deg); /* Rotate arrow when expanded */
+}
+
+.inventory-category ul li a.category-header:hover {
+    background-color: #211a1e;
+}
+
+/* Inventory Table */
+.inventory-table {
+    width: 100%;
+    max-width: 700px;
+}
+
+.inventory-table table {
+    width: 100%;
+    font-size: 1rem;
+    min-width: 500px;
+    min-height: 400px;
+    padding: 20px;
+}
+
+.inventory-table th, .inventory-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.inventory-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.inventory-table .low-stock {
+    color: red;
+    font-weight: bold;
+}
+
+/* Quantity Controls */
+.quantity-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.quantity-controls input, .quantity-controls select {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.quantity-controls button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.quantity-controls .add-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.quantity-controls .subtract-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+
+
+.subcategory {
+    display: none;
+    margin-left: 20px;
+}
+.subcategory:not(.hidden) {
+    display: block;
+}
+/* Rotate the arrow when expanded */
+.category-header.expanded::after {
+    transform: rotate(180deg);
+}
+
+
+/* Order History Page Styles */
+.order-history-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+}
+
+body.dark-mode .order-history-section {
+    background-color: #1e1e1e;
+    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.order-history-section h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.search-bar {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 200px;
+}
+
+.filter-button {
+    padding: 10px 20px;
+    background-color: #916953;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-button:hover {
+    background-color: #211a1e;
+}
+
+.orders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.order-card {
+    background-color: #dcccbb;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    width: 150px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-card.paid {
+    background-color: #295135;
+    color: white; /* Ensure text is readable */
+}
+
+.order-card.completed {
+    background-color: #211a1e;
+    color: white; /* Ensure text is readable */
+}
+
+.order-card p {
+    margin: 5px 0;
+}
+
+.availability-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: green;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.availability-icon.unavailable {
+    background-color: red;
+}
+
+/* Background box for menu category */
+.menu-category-box {
+    background-color: #efefef;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    flex-grow: 1; /* Allow the content to define its height */
+}
+
+/* Add Item Button */
+.add-item-container {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.add-item-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #916953;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.add-item-button:hover {
+    background-color: #211a1e;
+}
+
+
+
+
+/* Menu Item Container */
+.menu-item-container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Menu Item Content Layout */
+.menu-item-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Ensure all items align vertically */
+    gap: 40px; /* Add spacing between containers */
+}
+
+/* Ingredients Box */
+.ingredients-box {
+    flex: none; /* Prevent flex-grow from resizing this container */
+    border: 2px solid #916953;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px; /* Adjust height as needed */
+    width: 450px; /* Adjust width as needed */
+}
+
+/* Ingredients List */
+.ingredients-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ingredients-box ul li {
+    display: flex;
+    justify-content: space-between; /* Align ingredient name and quantity */
+    padding: 5px 0; /* Add spacing between rows */
+    font-size: 16px;
+}
+
+.ingredient-name {
+    font-weight: bold;
+    color: #000;
+}
+
+.ingredient-quantity {
+    color: #555;
+}
+
+.ingredient-quantity.low-stock {
+    color: red; /* Highlight low stock items */
+    font-weight: bold;
+}
+
+/* Edit Item Link */
+.edit-item-link {
+    margin-top: auto; /* Push the link to the bottom */
+    text-align: center;
+    display: block;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+
+.edit-item-link:hover {
+    text-decoration: underline;
+}
+
+/* Image and Button Container */
+.image-button-container {
+    flex: none; /* Prevent resizing of this container */
+    width: 200px; /* Set a fixed width for the image and button container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align items at the top */
+    gap: 20px; /* Add spacing between the image and button */
+}
+
+/* Availability Box */
+.availability-box {
+    margin-top: 20px; /* Add explicit margin to create space */
+}
+
+.ingredients-box h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ingredients-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ingredients-box ul li {
+    margin-bottom: 5px;
+}
+
+.ingredients-box .low-stock {
+    color: red;
+    font-weight: bold;
+}
+
+.edit-item-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #916953;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.edit-item-link:hover {
+    text-decoration: underline;
+}
+
+/* Image Box */
+.image-box {
+    width: 100%;
+    border: 2px solid #916953;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.image-box img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.image-box p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Availability Button Box */
+.availability-box {
+    width: 100%;
+    border: 2px solid #916953;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.availability-button {
+    padding: 10px 20px;
+    background-color: #295135;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.availability-button:hover {
+    background-color: #216128;
+}
+
+
+
+
+
+
+
+/* Add New Item Page Styles */
+.add-new-item-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.add-new-item-header {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Left Section: Form and Image Upload */
+.left-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+/* Box Styling */
+.box {
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #916953;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Layout */
+.add-new-item-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-new-item-form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #916953;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* Image Upload Section */
+.add-new-item-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.upload-label {
+    cursor: pointer;
+    color: #000;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+/* Ingredients Section */
+.ingredients-section {
+    flex: 1;
+    text-align: left;
+}
+
+.ingredients-section h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ingredient-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ingredient-actions select {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #916953;
+    border-radius: 5px;
+}
+
+.ingredient-actions button {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.add-btn:hover {
+    background-color: #388e3c;
+}
+
+.remove-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.remove-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Buttons Section */
+.add-new-item-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.add-new-item-buttons button {
+    flex: 1;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cancel-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background-color: #d32f2f;
+}
+
+.save-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.save-btn:hover {
+    background-color: #388e3c;
+}
+
+
+
+
+/* Edit Menu Item Page Styles */
+.edit-menu-item-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.edit-menu-item-header {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Left Section: Form and Image Upload */
+.edit-left-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+/* Box Styling */
+.edit-box {
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #916953;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Layout */
+.edit-menu-item-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.edit-menu-item-form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #916953;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* Image Upload Section */
+.edit-menu-item-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.edit-upload-label {
+    cursor: pointer;
+    color: #000;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+/* Ingredients Section */
+.edit-ingredients-section {
+    flex: 1;
+    text-align: left;
+}
+
+.edit-ingredients-section h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.edit-ingredient-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.edit-ingredient-actions select {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #916953;
+    border-radius: 5px;
+}
+
+.edit-ingredient-actions button {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-add-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.edit-add-btn:hover {
+    background-color: #388e3c;
+}
+
+.edit-remove-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.edit-remove-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Buttons Section */
+.edit-menu-item-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.edit-menu-item-buttons button {
+    flex: 1;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-cancel-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.edit-cancel-btn:hover {
+    background-color: #d32f2f;
+}
+
+.edit-save-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.edit-save-btn:hover {
+    background-color: #388e3c;
+}
+
+
+
+
+
+
+
+
+
+
+/* pos Page Layout */
+.menu-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start; /* Align items to the top */
+}
+
+/* Category Section */
+.category-list {
+    width: 200px;
+    background-color: #916953; /* Updated background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%; /* Ensure it stretches */
+}
+
+.category-list ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.category-list ul li {
+    margin-bottom: 10px; /* Add spacing between items */
+}
+
+.category-list ul li a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Text color */
+    font-size: 14px; /* Adjust font size */
+    font-weight: bold; /* Make text bold */
+    display: block; /* Make the link a block element */
+    padding: 10px 15px; /* Add padding for spacing */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.category-list ul li a.selected {
+    background-color: #211a1e; /* Highlight active category */
+    color: white; /* Ensure text is white */
+}
+
+.category-list ul li a:hover {
+    background-color: #000000; /* Updated hover effect color */
+    color: white; /* Ensure text is white */
+}
+
+/* Menu Items Section */
+.item-section {
+    flex: 1;
+}
+
+.category-box {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.category-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.item-card {
+    position: relative;
+    background-color: #295135;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 150px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-card img {
+    width: 140px; /* Increase the width further */
+    height: 140px; /* Increase the height further */
+    object-fit: cover; /* Ensure the image fits within the dimensions */
+    border-radius: 5px; /* Keep the rounded corners */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.item-card p {
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.item-card.disabled {
+    background-color: #d3d3d3; /* Light gray background */
+    color: #666; /* Darker text color for contrast */
+    opacity: 0.8; /* Slight transparency for a "disabled" effect */
+}
+
+.item-card.disabled img {
+    opacity: 0.6; /* Dim the image for unavailable items */
+}
+
+.item-card.disabled p {
+    color: #666; /* Adjust text color for better readability */
+}
+
+.item-card:hover {
+    transform: scale(1.05);
+}
+
+.status-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+.status-icon {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: green;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.status-icon.unavailable {
+    background-color: red;
+}
+
+/* Menu Title */
+.menu-header {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+    padding-left: 20px; /* Align with the content */
+}
+
+.category-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+    padding-left: 10px; /* Align with the grid */
+    color: #333;
+}
+
+/* Add Item Button */
+.add-item-wrapper {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.add-item-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #916953;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.add-item-link:hover {
+    background-color: #211a1e;
+}
+
+.selected-orders {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.selected-orders h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.order-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.order-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    font-size: 16px;
+}
+
+.remove-order {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.order-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.place-order {
+    background-color: #295135;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cancel-order {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.place-order:hover {
+    background-color: #216128;
+}
+
+.cancel-order:hover {
+    background-color: #d32f2f;
+}
+
+
+
+
+
+
+/* Order Details Section */
+.order-details-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 30px;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 1200px; /* Increased width */
+    margin: 40px auto;
+}
+
+.order-details {
+    flex: 3; /* Increased flex to make it even wider */
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.order-id {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.customer-name {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.order-status {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    color: white;
+}
+
+.order-status.waiting {
+    background-color: #dcccbb; /* Beige for Waiting */
+}
+
+.order-items p {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.item-price {
+    font-weight: bold;
+}
+
+.order-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.total-price {
+    color: #333;
+}
+
+.order-actions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1; /* Reduced flex to make it narrower */
+}
+
+.edit-order-btn,
+.remove-order-btn,
+.served-order-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.edit-order-btn {
+    background-color: #757575; /* Gray for Edit */
+}
+
+.remove-order-btn {
+    background-color: #f44336; /* Red for Remove */
+}
+
+.served-order-btn {
+    background-color: #295135; /* Green for Served */
+}
+
+.edit-order-btn:hover {
+    background-color: #616161;
+}
+
+.remove-order-btn:hover {
+    background-color: #d32f2f;
+}
+
+.served-order-btn:hover {
+    background-color: #216128;
+}

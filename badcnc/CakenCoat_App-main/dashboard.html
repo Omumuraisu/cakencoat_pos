@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" type="text/css" />
+    <script src="dashboard.js" defer></script>
+</head>
+    
+<body>
+    <div class="header">
+        <div class="menu-icon-button">
+            <button id="menu-toggle">&#9776;</button> <!-- Menu icon -->
+        </div>
+        <img src="Images/cnclogo.png" alt="Logo" class="logo">
+        <div class="brand-name">Cake n' Coat</div>
+        <div class="username">Username
+            <div><button>Sign out</button></div>
+        </div>
+    </div>
+    
+    <!-- Sidebar or menu -->
+    <div id="sidebar" class="sidebar hidden">
+        <button id="close-sidebar" class="close-sidebar-button">X</button> <!-- Close button -->
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </div>
+
+
+    <div class="main">
+        <div class="button-container">
+            <button class="button pos-button">POS</button>
+            <button class="button inventory-button">Inventory</button>
+            <button class="button menu-button">Menu</button>
+        </div>
+        <div class="divider"></div>
+        <div class="latest-order">
+            <h1>Orders</h1>
+            <div class="order-status">
+                <div class="status-icons">
+                    <span class="status-indicator pending"></span> Pending
+                    <span class="status-indicator paid"></span> Paid
+                </div>
+                <button class="order-history">
+                    Order History <span class="history-icon">⏱</span>
+                </button>
+            </div>
+            <div class="orders-grid">
+                <div class="order-card">
+                    <p>#0921</p>
+                    <p>Anton</p>
+                    <p>Total: 250Php</p>
+                </div>
+                <div class="order-card">
+                    <p>#0921</p>
+                    <p>Nash</p>
+                    <p>Total: 250Php</p>
+                </div>
+                <div class="order-card paid">
+                    <p>#0921</p>
+                    <p>Mhel</p>
+                    <p>Total: 250Php</p>
+                </div>
+                <div class="order-card">
+                    <p>#0921</p>
+                    <p>Miguel</p>
+                    <p>Total: 250Php</p>
+                </div>
+                <div class="order-card">
+                    <p>#0921</p>
+                    <p>Ebenzer</p>
+                    <p>Total: 250Php</p>
+                </div>
+                <div class="order-card">
+                    <p>#0921</p>
+                    <p>Erden</p>
+                    <p>Total: 250Php</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

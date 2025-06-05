@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Menu Item</title>
+    <link rel="stylesheet" href="dashboard.css" type="text/css" />
+    <script src="dashboard.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <div class="menu-icon-button">
+            <button id="menu-toggle">&#9776;</button> <!-- Menu icon -->
+        </div>
+        <img src="Images/cnclogo.png" alt="Logo" class="logo">
+        <div class="brand-name">Cake n' Coat</div>
+        <div class="username">Username
+            <div><button>Sign out</button></div>
+        </div>
+    </div>
+    
+    <!-- Sidebar or menu -->
+    <div id="sidebar" class="sidebar hidden">
+        <button id="close-sidebar" class="close-sidebar-button">X</button> <!-- Close button -->
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </div>
+
+    <!-- Edit Menu Item Section -->
+    <div class="edit-menu-item-container">
+        <h1 class="edit-menu-item-header">EDIT FRENCH VANILLA</h1>
+    
+        <!-- Left Section: Form and Image Upload -->
+        <div class="edit-left-section">
+            <!-- Form Section -->
+            <div class="edit-box">
+                <div class="edit-menu-item-form">
+                    <input type="text" value="FRENCH VANILLA" id="edit-item-name">
+                    <input type="number" value="280" id="edit-item-price">
+                    <a href="#" class="edit-remove-link" style="color: black; text-decoration: underline;">Delete Item</a>
+                </div>
+            </div>
+        
+            <!-- Image Upload Section -->
+            <div class="edit-box">
+                <div class="edit-menu-item-image">
+                    <img src="Images/coffee.png" alt="Coffee Image" style="width: 200px; height: auto; border-radius: 10px;">
+                    <label for="edit-item-image" class="edit-upload-label">Change Image</label>
+                    <input type="file" id="edit-item-image" accept="image/*" style="display: none;">
+                </div>
+            </div>
+        </div>
+    
+        <!-- Right Section: Ingredients -->
+        <div class="edit-box edit-ingredients-section">
+            <h2>Ingredients</h2>
+            <div class="edit-ingredient-actions">
+                <select id="edit-ingredient-select">
+                    <option value="Chicken">Chicken</option>
+                    <option value="Beef">Beef</option>
+                    <option value="Pork">Pork</option>
+                    <option value="Fish">Fish</option>
+                    <option value="Sausage">Sausage</option>
+                    <option value="Hotdog">Hotdog</option>
+                    <option value="Bacon">Bacon</option>
+                    <option value="Ham">Ham</option>
+                </select>
+                <button class="edit-add-btn">+</button>
+                <button class="edit-remove-btn">x</button>
+            </div>
+        </div>
+    
+        <!-- Buttons Section -->
+        <div class="edit-menu-item-buttons">
+            <button class="edit-cancel-btn">CANCEL</button>
+            <button class="edit-save-btn">SAVE</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History</title>
+    <link rel="stylesheet" href="dashboard.css" type="text/css" />
+    <script src="dashboard.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <div class="menu-icon-button">
+            <button id="menu-toggle">&#9776;</button> <!-- Menu icon -->
+        </div>
+        <img src="Images/cnclogo.png" alt="Logo" class="logo">
+        <div class="brand-name">Cake n' Coat</div>
+        <div class="username">Username
+            <div><button>Sign out</button></div>
+        </div>
+    </div>
+    
+    <!-- Sidebar or menu -->
+    <div id="sidebar" class="sidebar hidden">
+        <button id="close-sidebar" class="close-sidebar-button">X</button> <!-- Close button -->
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </div>
+
+    <!-- Main content for Order History -->
+    <div class="main">
+        <h1>Order History</h1>
+        <div class="order-status">
+            <input type="text" placeholder="Search" class="search-bar">
+            <div class="status-icons">
+                <span class="status-indicator pending"></span> Waiting
+                <span class="status-indicator paid"></span> Served
+                <span class="status-indicator completed"></span> Payed
+            </div>
+            <button class="filter-button">DAY ▼</button>
+        </div>
+
+        <div class="order-history-section">
+            <h2>Today</h2>
+            <div class="orders-grid">
+                <div class="order-card">
+                    <p>#0921</p>
+                    <p>Anton</p>
+                    <p>Total: 250Php</p>
+                </div>
+                <div class="order-card">
+                    <p>#0921</p>
+                    <p>Nash</p>
+                    <p>Total: 250Php</p>
+                </div>
+
+                <div class="order-card paid">
+                    <p>#0921</p>
+                    <p>Mhel</p>
+                    <p>Total: 250Php</p>
+                </div>
+                <div class="order-card">
+                    <p>#0921</p>
+                    <p>Miguel</p>
+                    <p>Total: 250Php</p>
+                </div>
+                <div class="order-card">
+                    <p>#0921</p>
+                    <p>Ebenzer</p>
+                    <p>Total: 250Php</p>
+                </div>
+               
+                <div class="order-card">
+                    <p>#0921</p>
+                    <p>Erden</p>
+                    <p>Total: 250Php</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="order-history-section">
+            <h2>01/23/2024</h2>
+            <div class="orders-grid">
+                <div class="order-card completed">
+                    <p>#0921</p>
+                    <p>Lebron</p>
+                    <p>Total: 250Php</p>
+                </div>
+                <div class="order-card completed">
+                    <p>#0921</p>
+                    <p>Lebron</p>
+                    <p>Total: 250Php</p>
+                </div>
+                <div class="order-card completed">
+                    <p>#0921</p>
+                    <p>Lebron</p>
+                    <p>Total: 250Php</p>
+                </div>
+                <div class="order-card completed">
+                    <p>#0921</p>
+                    <p>Lebron</p>
+                    <p>Total: 250Php</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

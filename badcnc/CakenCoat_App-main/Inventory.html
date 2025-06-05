@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+    <link rel="stylesheet" href="dashboard.css" type="text/css" />
+    <script src="dashboard.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="menu-icon-button">
+            <button id="menu-toggle">&#9776;</button> <!-- Menu icon -->
+        </div>
+        <img src="Images/cnclogo.png" alt="Logo" class="logo">
+        <div class="brand-name">Cake n' Coat</div>
+        <div class="username">Username
+            <div><button>Sign out</button></div>
+        </div>
+    </div>
+
+     <!-- Sidebar -->
+     <div id="sidebar" class="sidebar hidden">
+        <button id="close-sidebar" class="close-sidebar-button">X</button> <!-- Close button -->
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </div>
+    
+    <div class="main">
+        <h1>Inventory</h1>
+        <div class="inventory-container">
+            <!-- Category Sidebar -->
+            <div class="inventory-category">
+                <h2>Category</h2>
+                <ul>
+                    <li>
+                        <a href="#" class="category-header">Kitchen</a>
+<ul class="subcategory hidden">
+    <li><a href="#">Meat</a></li>
+    <li><a href="#">Seasoning</a></li>
+    <li><a href="#">Liquids</a></li>
+    <li><a href="#">Dairy</a></li>
+    <li><a href="#">Grains & Starches</a></li>
+    <li><a href="#">Vegetables</a></li>
+    <li><a href="#">Fruits</a></li>
+    <li><a href="#">Condiments</a></li>
+    <li><a href="#">Canned</a></li>
+</ul>
+                    </li>
+                    <li>
+                        <a href="#" class="category-header">Bar</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Inventory Table -->
+            <div class="inventory-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Chicken</td>
+                            <td>3 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Beef</td>
+                            <td>5 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Pork</td>
+                            <td>12 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Fish</td>
+                            <td class="low-stock">1 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Sausage</td>
+                            <td>2 packs</td>
+                        </tr>
+                        <tr>
+                            <td>Hotdog</td>
+                            <td>4 packs</td>
+                        </tr>
+                        <tr>
+                            <td>Bacon</td>
+                            <td>2 packs</td>
+                        </tr>
+                        <tr>
+                            <td>Ham</td>
+                            <td class="low-stock">1 pack</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Quantity Controls -->
+                <div class="quantity-controls">
+                    <input type="text" placeholder="Enter Amount">
+                    <select>
+                        <option value="kilogram">kilogram</option>
+                        <option value="pack">pack</option>
+                    </select>
+                    <button class="add-btn">+</button>
+                    <button class="subtract-btn">-</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

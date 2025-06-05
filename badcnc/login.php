@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="assets/css/login.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img src="assets/images/cnclogo.png" alt="Cake n' Coat Logo" class="logo"> 
+    <div class="login-container">
+        <form action="actions/login.php" method="POST"> 
+            <label for="username"><strong>Username</strong></label>
+            <input type="text" id="username" name="uname" placeholder="Enter your username" required>
+            
+            <label for="password"><strong>Password</strong></label>
+            <div class="password-container">
+                <input type="password" id="password" name="pw" placeholder="Enter your password" required>
+                <img src="assets/images/eye-icon.png" alt="Toggle Password Visibility" class="toggle-password" onclick="togglePasswordVisibility()">
+            </div>
+            
+            <button type="submit">Login</button>
+            <p class="error-message" id="error-message"></p>
+        </form>
+    </div>
+    <div class="copyright">&copy; 2025 Cake n' Coat. All rights reserved.</div>
+    <script>
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('password');
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+        }
+    </script>
+</body>
+</html>
